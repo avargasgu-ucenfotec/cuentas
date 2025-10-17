@@ -7,19 +7,34 @@ public class Main {
         System.out.println("Aplicación de gestión de cuentas bancarias");
 
         //Crear una cuenta de ahorro con $100 por defecto
-        CuentasAhorro miCuentaAhorro1 = new CuentasAhorro("00001");
+        CuentasAhorro miCuentaAhorro = new CuentasAhorro("A0001");
 
         //Imprimir cuenta de ahorro
-        System.out.println(miCuentaAhorro1);
+        System.out.println(miCuentaAhorro);
 
         //Intentar asignar un saldo no válido a la cuenta de ahorro
-        miCuentaAhorro1.setSaldo(50.0);
+        miCuentaAhorro.setSaldo(50.0);
 
         //Asignar un valor válido a la cuenta de ahorro
-        miCuentaAhorro1.setSaldo(150.0);
+        miCuentaAhorro.setSaldo(150.0);
 
         //Imprimir cuenta de ahorro
-        System.out.println(miCuentaAhorro1);
+        System.out.println(miCuentaAhorro);
+
+        //Crear una cuenta de débito con $0 por defecto
+        CuentasDebito miCuentaDebito = new CuentasDebito("D0001");
+
+        //Imprimir cuenta de débito
+        System.out.println(miCuentaDebito);
+
+        //Intentar asignar un saldo no válido a la cuenta de débito
+        miCuentaDebito.setSaldo(-100.0);
+
+        //Asignar un valor válido a la cuenta de ahorro
+        miCuentaDebito.setSaldo(200.0);
+
+        //Imprimir cuenta de ahorro
+        System.out.println(miCuentaDebito);
 
 
 
