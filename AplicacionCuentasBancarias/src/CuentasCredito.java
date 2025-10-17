@@ -59,7 +59,7 @@ public class CuentasCredito {
         return "\nCuenta de crédito" +
                 "\nID: " + id +
                 "\nsaldo: $" + saldo +
-                "Límite crediticio: $" + limiteCredito +
+                "\nLímite crediticio: $" + limiteCredito +
                 "\n";
     }
 

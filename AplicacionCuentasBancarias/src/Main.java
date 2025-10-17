@@ -33,11 +33,23 @@ public class Main {
         //Asignar un valor válido a la cuenta de ahorro
         miCuentaDebito.setSaldo(200.0);
 
-        //Imprimir cuenta de ahorro
+        //Imprimir cuenta de débito
         System.out.println(miCuentaDebito);
 
+        //Crear una cuenta de crédito con un límite crediticio de $10000
+        CuentasCredito miCuentaCredito = new CuentasCredito("C0001");
+        miCuentaCredito.setLimiteCredito(10000.0);
 
+        //Imprimir cuenta de crédito
+        System.out.println(miCuentaCredito);
 
+        //Intentar asignar un saldo no válido a la cuenta de crédito
+        miCuentaCredito.setSaldo(-15000.0);
 
+        //Asignar un valor válido a la cuenta de ahorro
+        miCuentaCredito.setSaldo(-5000.0);
+
+        //Imprimir cuenta de crédito
+        System.out.println(miCuentaCredito);
     }
 }
