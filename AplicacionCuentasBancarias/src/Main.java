@@ -21,6 +21,18 @@ public class Main {
         //Imprimir cuenta de ahorro
         System.out.println(miCuentaAhorro);
 
+        //Desactivar cuenta de ahorro
+        miCuentaAhorro.setActiva(false);
+
+        //Imprimir cuenta de ahorro
+        System.out.println(miCuentaAhorro);
+
+        //Intentar asignar un valor válido a la cuenta de ahorro inactiva
+        miCuentaAhorro.setSaldo(300.0);
+
+        //Imprimir cuenta de ahorro
+        System.out.println(miCuentaAhorro);
+
         //Crear una cuenta de débito con $0 por defecto
         CuentasDebito miCuentaDebito = new CuentasDebito("D0001");
 
