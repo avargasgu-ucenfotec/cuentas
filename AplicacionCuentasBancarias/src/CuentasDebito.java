@@ -11,11 +11,6 @@ public class CuentasDebito {
         this.saldo = 0.0;
     }
 
-    public CuentasDebito(String id, double saldo) {
-        this.id = id;
-        this.saldo = saldo;
-    }
-
     //Getter
     public String getId() {
         return id;
