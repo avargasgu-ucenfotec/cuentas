@@ -45,6 +45,10 @@ public class CuentasDebito {
         this.saldo = saldo;
     }
 
+    public void setActiva(boolean activa) {
+        this.activa = activa;
+    }
+
     //String()
     public String toString() {
         return "\nCuenta de débito" +

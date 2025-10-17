@@ -56,6 +56,10 @@ public class CuentasCredito {
         this.saldo = saldo;
     }
 
+    public void setActiva(boolean activa) {
+        this.activa = activa;
+    }
+
     public void setLimiteCredito(double limiteCredito) {
         if (!estaActiva()) {
             System.out.println("Operación no válida.");
