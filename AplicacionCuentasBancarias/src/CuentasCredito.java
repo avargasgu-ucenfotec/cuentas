@@ -5,6 +5,7 @@ public class CuentasCredito {
     private double saldo;
     private boolean activa;
     private double limiteCredito;
+    private String tipo;
 
     //Métodos
     //Constructor
@@ -13,6 +14,15 @@ public class CuentasCredito {
         this.saldo = 0.0;
         this.activa = true;
         this.limiteCredito = 0.0;
+        this.tipo = null;
+    }
+
+    public CuentasCredito(String id, String tipo) {
+        this.id = id;
+        this.saldo = 0.0;
+        this.activa = true;
+        this.limiteCredito = 0.0;
+        this.tipo = tipo;
     }
 
     //Getter
@@ -30,6 +40,10 @@ public class CuentasCredito {
 
     public double getLimiteCredito() {
         return limiteCredito;
+    }
+
+    public String getTipo() {
+        return tipo;
     }
 
     //Setter
@@ -72,6 +86,20 @@ public class CuentasCredito {
             return;
         }
         this.limiteCredito = limiteCredito;
+    }
+
+    public void setTipo(String tipo) {
+        if (!estaActiva()) {
+            System.out.println("Operación no válida.");
+            System.out.println("La cuenta de crédito " + id + " está inactiva.");
+            return;
+        }
+        if (tipo.equals("Cashback") || tipo.equals("Gane Premios") || tipo.equals("Millas")) {
+            this.tipo = tipo;
+        } else {
+            System.out.println("Operación no válida.");
+            System.out.println("Tipos disponibles: Cashback, Gane Premios y Millas.");
+        }
     }
 
     //String()
