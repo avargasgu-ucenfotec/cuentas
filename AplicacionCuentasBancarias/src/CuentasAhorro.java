@@ -4,6 +4,7 @@ public class CuentasAhorro {
     private String id;
     private double saldo;
     private boolean activa;
+    private double porcentajeInteres;
 
     //Métodos
     //Constructor
@@ -11,6 +12,14 @@ public class CuentasAhorro {
         this.id = id;
         this.saldo = 100.0;
         this.activa = true;
+        this.porcentajeInteres = 0.01;
+    }
+
+    public CuentasAhorro(String id, double porcentajeInteres) {
+        this.id = id;
+        this.saldo = 100.0;
+        this.activa = true;
+        this.porcentajeInteres = porcentajeInteres;
     }
 
     //Getter
@@ -24,6 +33,10 @@ public class CuentasAhorro {
 
     public boolean estaActiva() {
         return activa;
+    }
+
+    public double getPorcentajeInteres() {
+        return porcentajeInteres;
     }
 
     //Setter
@@ -47,6 +60,10 @@ public class CuentasAhorro {
 
     public void setActiva(boolean activa) {
         this.activa = activa;
+    }
+
+    public void setPorcentajeInteres(double porcentaje) {
+        this.porcentajeInteres = porcentaje;
     }
 
     //String()
@@ -107,5 +124,14 @@ public class CuentasAhorro {
             return;
         }
         setSaldo(saldo + monto);
+    }
+
+    public void aplicarIntereses() {
+        if (!estaActiva()) {
+            System.out.println("Operación no válida.");
+            System.out.println("La cuenta de ahorro " + id + " está inactiva.");
+            return;
+        }
+        setSaldo((1.0 + porcentajeInteres) * saldo);
     }
 }

@@ -52,13 +52,13 @@ public class Main {
         System.out.println(miCuentaAhorro);
 
         //Intentar pagar un monto mayor al disponible en la cuenta de ahorros
-        miCuentaAhorro.retiro(1000.0);
+        miCuentaAhorro.pago(1000.0);
 
         //Imprimir cuenta de ahorro
         System.out.println(miCuentaAhorro);
 
         //Intentar pagar un monto válido de la cuenta de ahorros
-        miCuentaAhorro.retiro(50.0);
+        miCuentaAhorro.pago(50.0);
 
         //Imprimir cuenta de ahorro
         System.out.println(miCuentaAhorro);
@@ -71,6 +71,12 @@ public class Main {
 
         //Intentar hacer un depósito por un monto válido a la cuenta de ahorros
         miCuentaAhorro.deposito(50.0);
+
+        //Imprimir cuenta de ahorro
+        System.out.println(miCuentaAhorro);
+
+        //Intentar aplicar los intereses asociados a la cuenta de ahorros
+        miCuentaAhorro.aplicarIntereses();
 
         //Imprimir cuenta de ahorro
         System.out.println(miCuentaAhorro);
