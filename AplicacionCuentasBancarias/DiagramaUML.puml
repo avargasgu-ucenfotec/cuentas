@@ -1,0 +1,123 @@
+@startuml
+class CuentasDebito {
+- String id
+- double saldo
+- boolean activa
+- double porcentajeInteres
++ String getId()
++ double getSaldo()
++ boolean estaActiva()
++ double getPorcentajeInteres()
++ void setId(String)
++ void setSaldo(double)
++ void setActiva(boolean)
++ void setPorcentajeInteres(double)
++ String toString()
++ boolean equals(CuentasDebito)
++ void retiro(double)
++ void pago(double)
++ void deposito(double)
++ void aplicarIntereses()
+}
+
+
+class Administrador {
+- String nombreCompleto
+- String cedula
+- String correoElectronico
++ String getNombreCompleto()
++ void setNombreCompleto(String)
++ String getCedula()
++ void setCedula(String)
++ String getCorreoElectronico()
++ void setCorreoElectronico(String)
++ String toString()
++ boolean equals(Administrador)
+}
+
+
+class Cliente {
+- String nombreCompleto
+- String cedula
+- char sexo
+- String correoElectronico
+- String profesion
+- String direccion
+- ArrayList<CuentasAhorro> cuentasAhorros
+- ArrayList<CuentasDebito> cuentasDebito
+- ArrayList<CuentasCredito> cuentasCredito
++ String getNombreCompleto()
++ void setNombreCompleto(String)
++ String getCedula()
++ void setCedula(String)
++ char getSexo()
++ void setSexo(char)
++ String getCorreoElectronico()
++ void setCorreoElectronico(String)
++ String getProfesion()
++ void setProfesion(String)
++ String getDireccion()
++ void setDireccion(String)
++ String toString()
++ boolean equals(Cliente)
+}
+
+
+class Main {
++ {static} void main(String[])
+}
+
+class CuentasAhorro {
+- String id
+- double saldo
+- boolean activa
+- double porcentajeInteres
++ String getId()
++ double getSaldo()
++ boolean estaActiva()
++ double getPorcentajeInteres()
++ void setId(String)
++ void setSaldo(double)
++ void setActiva(boolean)
++ void setPorcentajeInteres(double)
++ String toString()
++ boolean equals(CuentasAhorro)
++ void retiro(double)
++ void pago(double)
++ void deposito(double)
++ void aplicarIntereses()
+}
+
+
+class CuentasCredito {
+- String id
+- double saldo
+- boolean activa
+- double limiteCredito
+- String tipo
++ String getId()
++ double getSaldo()
++ boolean estaActiva()
++ double getLimiteCredito()
++ String getTipo()
++ void setId(String)
++ void setSaldo(double)
++ void setActiva(boolean)
++ void setLimiteCredito(double)
++ void setTipo(String)
++ String toString()
++ boolean equals(CuentasCredito)
++ void retiro(double)
++ void pago(double)
+}
+
+Main "1" -- "*" Cliente
+Main "1" -- "*" Administrador
+Main "1" -- "*" CuentasAhorro
+Main "1" -- "*" CuentasDebito
+Main "1" -- "*" CuentasCredito
+Cliente "1" -- "*" CuentasAhorro
+Cliente "1" -- "*" CuentasDebito
+Cliente "1" -- "*" CuentasCredito
+
+@enduml
