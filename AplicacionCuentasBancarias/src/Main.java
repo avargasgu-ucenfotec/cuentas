@@ -16,7 +16,7 @@ public class Main {
         miCuentaAhorro.setSaldo(50.0);
 
         //Asignar un valor válido a la cuenta de ahorro
-        miCuentaAhorro.setSaldo(150.0);
+        miCuentaAhorro.setSaldo(350.0);
 
         //Imprimir cuenta de ahorro
         System.out.println(miCuentaAhorro);
@@ -29,6 +29,48 @@ public class Main {
 
         //Intentar asignar un valor válido a la cuenta de ahorro inactiva
         miCuentaAhorro.setSaldo(300.0);
+
+        //Imprimir cuenta de ahorro
+        System.out.println(miCuentaAhorro);
+
+        //Activar cuenta de ahorro
+        miCuentaAhorro.setActiva(true);
+
+        //Imprimir cuenta de ahorro
+        System.out.println(miCuentaAhorro);
+
+        //Intentar retirar un monto mayor al disponible en la cuenta de ahorros
+        miCuentaAhorro.retiro(1000.0);
+
+        //Imprimir cuenta de ahorro
+        System.out.println(miCuentaAhorro);
+
+        //Intentar retirar un monto válido de la cuenta de ahorros
+        miCuentaAhorro.retiro(50.0);
+
+        //Imprimir cuenta de ahorro
+        System.out.println(miCuentaAhorro);
+
+        //Intentar pagar un monto mayor al disponible en la cuenta de ahorros
+        miCuentaAhorro.retiro(1000.0);
+
+        //Imprimir cuenta de ahorro
+        System.out.println(miCuentaAhorro);
+
+        //Intentar pagar un monto válido de la cuenta de ahorros
+        miCuentaAhorro.retiro(50.0);
+
+        //Imprimir cuenta de ahorro
+        System.out.println(miCuentaAhorro);
+
+        //Intentar hacer un depósito por un monto no válido a la cuenta de ahorros
+        miCuentaAhorro.deposito(-50.0);
+
+        //Imprimir cuenta de ahorro
+        System.out.println(miCuentaAhorro);
+
+        //Intentar hacer un depósito por un monto válido a la cuenta de ahorros
+        miCuentaAhorro.deposito(50.0);
 
         //Imprimir cuenta de ahorro
         System.out.println(miCuentaAhorro);
