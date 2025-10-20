@@ -62,4 +62,50 @@ public class CuentasDebito {
     public boolean equals(CuentasDebito cuenta) {
         return (id.equals(cuenta.id));
     }
+
+    //Funcionales
+    public void retiro(double monto) {
+        if (!estaActiva()) {
+            System.out.println("Operación no válida.");
+            System.out.println("La cuenta de débito " + id + " está inactiva.");
+            return;
+        }
+        if (saldo - monto < 0.0) {
+            System.out.println("Operación no válida.");
+            System.out.println("Las cuentas de débito no pueden tener un saldo menor a $0.");
+            System.out.println("El retiro solicitado no se realizó.");
+            return;
+        }
+        setSaldo(saldo - monto);
+    }
+
+    public void pago(double monto) {
+        if (!estaActiva()) {
+            System.out.println("Operación no válida.");
+            System.out.println("La cuenta de débito " + id + " está inactiva.");
+            return;
+        }
+        if (saldo - monto < 0.0) {
+            System.out.println("Operación no válida.");
+            System.out.println("Las cuentas de débito no pueden tener un saldo menor a $0.");
+            System.out.println("El pago solicitado no se realizó.");
+            return;
+        }
+        setSaldo(saldo - monto);
+    }
+
+    public void deposito(double monto) {
+        if (!estaActiva()) {
+            System.out.println("Operación no válida.");
+            System.out.println("La cuenta de débito " + id + " está inactiva.");
+            return;
+        }
+        if (monto < 0.0) {
+            System.out.println("Operación no válida.");
+            System.out.println("Las cuentas de débito no puede recibir un depósito negativo.");
+            System.out.println("El depósito solicitado no se realizó.");
+            return;
+        }
+        setSaldo(saldo + monto);
+    }
 }
